@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+@theme {
+  --color-primary: #1a2532;
+  --color-secondary: #eaf0ff;
+  --color-primary-text: #4f5665;
+  --color-heading-text: #0b132a;
+  --font-primary: "Rubik", sans-serif;
+  --color-thirdary: #c29b2f;
+}
+
+@layer {
+  .section-container {
+    @apply container mx-auto px-4 py-16;
+  }
+}
+
+/* Pagination Bullets */
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background: #dde0e4;
+  opacity: 1;
+  margin: 0 5px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--color-primary);
+  opacity: 1;
+  transform: scale(1.2);
+  transition: all 0.3s;
+}
+
+/* Navigation Buttons */
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: " ";
+}
+
+/* Remove blue arrows */
+.swiper-button-prev svg path,
+.swiper-button-next svg path {
+  fill: transparent;
+  stroke: transparent;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-image: none !important;
+}
+
+.swiper-button-prev::before,
+.swiper-button-next::before,
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none !important;
+}
